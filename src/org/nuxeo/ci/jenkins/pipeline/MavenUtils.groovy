@@ -1,8 +1,8 @@
 package org.nuxeo.ci.jenkins.pipeline
 
-class MavenUtils {
+class MavenUtils implements Serializable {
 
-    static String getMavenVersion(String pomString) {
+    static def getMavenVersion(String pomString) {
         return new XmlSlurper().parse(new StringReader(pomString)).version
     }
 
