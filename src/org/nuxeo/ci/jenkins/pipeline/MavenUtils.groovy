@@ -2,8 +2,8 @@ package org.nuxeo.ci.jenkins.pipeline
 
 class MavenUtils {
 
-    static def getMavenVersion(String pomPath) {
-        return new XmlSlurper().parse(new File(pomPath)).version
+    static def getMavenVersion(String pomString) {
+        return new XmlSlurper().parse(new StringReader(pomString)).version
     }
 
 }
