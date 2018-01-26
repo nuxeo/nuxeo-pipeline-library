@@ -15,27 +15,14 @@ def upstreamCause() {
 }
 
 /**
- * Navigates the upstream run of the current cuild
- **/
-@NonCPS
-def upstreamRun() {
-    def upstreamCause = upstreamCause()
-    if (upstreamCause == null) {
-        return null
-    }
-    return upstreamCause.upstreamRun
-}
-
-
-/**
  * Copy filtered upstream artifacts to target dir
  **/
 @NonCPS
-def copyUpstreamArtifacts(String filename, String target) {
-    def upstreamRun = upstreamRun()
+def copyUpstreamArtifacts(String filename, String target, boolean flatten=true) {
+    def upstreamRun = upstreamCause()?.upstreamRun
     if (upstreamRun == null) {
         return false
     }
-    copyArtifacts(projectName: upstreamRun.parent.fullName, selector: [$class: 'TriggeredBuildSelector'], filter: '**/'+filename, target: target, flatten: true, optional: false)
+    copyArtifacts(projectName: upstreamRun.parent.fullName, selector: [$class: 'TriggeredBuildSelector'], filter: '**/'+filename, target: target, flatten: flatten, optional: false)
     return true
 }
