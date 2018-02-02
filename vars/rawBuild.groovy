@@ -23,6 +23,11 @@ def copyUpstreamArtifacts(String filename, String target, boolean flatten=true) 
     if (upstreamRun == null) {
         return false
     }
-    copyArtifacts(projectName: upstreamRun.parent.fullName, selector: [$class: 'TriggeredBuildSelector'], filter: '**/'+filename, target: target, flatten: flatten, optional: false)
+    copyArtifacts(projectName: upstreamRun.parent.fullName,
+                  selector: upstream(allowUpstreamDependencies: true, fallbackToLastSuccessful: false, upstreamFilterStrategy: 'UseGlobalSetting'),
+                  filter: '**/'+filename,
+                  target: target,
+                  flatten: flatten,
+                  optional: false)
     return true
 }
