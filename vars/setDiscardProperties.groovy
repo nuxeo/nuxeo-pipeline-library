@@ -19,7 +19,7 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
 	def build = Thread.currentThread().toString()
 	def regexp= ".+?/job/([^/]+)/.*"
 	def match = build  =~ regexp
-	def jobName = match[0][0]
+	def jobName = match[0]
 	println(jobName)
 
 	properties([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr: artiDaysToKeep, artifactNumToKeepStr: artiNumToKeep, daysToKeepStr: daysToKeep, numToKeepStr: numToKeep]]])
