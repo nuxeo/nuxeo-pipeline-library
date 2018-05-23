@@ -9,7 +9,7 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
 
 	if (properties([
         [$class:        'BuildDiscarderProperty',
-        strategy:       [$class: 'LogRotator', artifactDaysToKeepStr: NULL, artifactNumToKeepStr: NULL, daysToKeepStr: NULL, numToKeepStr: NULL]]]))	{	 
+        strategy:       [$class: 'LogRotator', artifactDaysToKeepStr: "NULL", artifactNumToKeepStr: "NULL", daysToKeepStr: "NULL", numToKeepStr: "NULL"]]]))	{	 
 		properties([
 		[$class: 	'BuildDiscarderProperty', 
 		strategy: 	[$class: 'LogRotator', artifactDaysToKeepStr: artiDaysToKeep, artifactNumToKeepStr: artiNumToKeep, daysToKeepStr: daysToKeep, numToKeepStr: numToKeep]]])
