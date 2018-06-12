@@ -1,7 +1,7 @@
 /**
  * run pipeline inside a docker compose stack through swarm, executing the post closure before shutting down the stack.
  */
-def withSwarmCompose(String name, String file, Closure body) {
+def call(String name, String file, Closure body) {
     def config = JenkinsLocationConfiguration.get()
     def master = config.getUrl()
     def compose = {
