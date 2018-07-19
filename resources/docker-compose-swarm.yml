@@ -4,7 +4,7 @@ services:
 
   swarm:
     build:
-       context: ${SWARM}/jenkins-slave-swarm
+       context: ${SWARM:-.}/jenkins-slave-swarm
        dockerfile: Dockerfile
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:rw
