@@ -29,6 +29,7 @@ import hudson.matrix.*;
 
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
-    test = currentJob.getName();
-    println(test);
+    // def item = hudson.model.Hudson.instance.getItem("createAndPublishSnapshot")
+    def currentBuild = Thread.currentThread().executable
+    println(currentBuild)
 }
