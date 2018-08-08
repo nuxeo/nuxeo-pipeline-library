@@ -48,5 +48,6 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
 artifactDaysToKeepStr:'1', artifactNumToKeepStr: '2', daysToKeepStr: '3', numToKeepStr: '4']]
     ])
     print(properties.values())
+    print(properties.keySet())
     print('working3')
 }
