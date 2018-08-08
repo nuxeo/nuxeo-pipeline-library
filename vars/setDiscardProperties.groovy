@@ -8,7 +8,7 @@
 @NonCPS
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
-
+    @NonCPS
     def test = (buildDiscarderProperty(setDiscardProperties(
             '',
             '1',
