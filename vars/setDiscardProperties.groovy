@@ -5,7 +5,6 @@
   * Overrides all set current job properties
 **/
 
-@NonCPS
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
   /*  def newParamsList = []
@@ -43,10 +42,6 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
                 '2')))
     print('working2')
     */
-    /*properties([
-        [$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator',
-artifactDaysToKeepStr:'1', artifactNumToKeepStr: '2', daysToKeepStr: '3', numToKeepStr: '4']]
-    ]) */
     print(properties)
     print(properties.values())
     print(properties.keySet())
