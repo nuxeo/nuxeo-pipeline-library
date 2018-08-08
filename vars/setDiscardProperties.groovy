@@ -9,7 +9,7 @@
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
     discardList = []
-    discardList.push(BuildDiscarderProperty(strategy(setDiscardProperties.call(
+    discardList.push(BuildDiscarderProperty(strategy(setDiscardProperties(
             artifactDaysToKeepStr: '',
             artifactNumToKeepStr: '1',
             daysToKeepStr: '60',
