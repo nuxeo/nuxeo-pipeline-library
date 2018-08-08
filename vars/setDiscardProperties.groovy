@@ -8,6 +8,18 @@
 @NonCPS
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
+    def newParamsList = []
+    def newbool = booleanParam(defaultValue: false, description: "deploy", name: "deploy_flag")
+    newParamsList.add(newbool)
+    def newParams = parameters(newParamsList)
+    properties([ //job property declaration
+        jobProperties,
+        disableConcurrentBuilds(),
+        newParams,
+        addSchedule,
+    ])
+
+/*
     @NonCPS
     def test = (buildDiscarderProperty(setDiscardProperties(
             '',
@@ -18,7 +30,7 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
     // discarderList = buildDiscarderProperty(discardList)
     print('working 2')
 
-
+*/
 
     /*
     def discardList = ""
