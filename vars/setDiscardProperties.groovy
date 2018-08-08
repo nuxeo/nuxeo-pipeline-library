@@ -8,6 +8,7 @@
 
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
+/*
     String discardList = new String()
     discardList.add(BuildDiscarderProperty(strategy(setDiscardProperties(
             artifactDaysToKeepStr: '',
@@ -15,6 +16,13 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
             daysToKeepStr: '60',
             numToKeepStr: '60'))))
 
+*/
+
+    discardList = [];
+
+    discardList.push(buildDiscarder(logRotator(
+                daysToKeepStr: '7',
+                numToKeepStr: '25')))
 
     properties([
         discardList
