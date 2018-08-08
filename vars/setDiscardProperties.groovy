@@ -5,7 +5,7 @@
   * Overrides all set current job properties
 **/
 
-
+@NonCPS
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
 
