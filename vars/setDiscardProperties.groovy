@@ -9,11 +9,11 @@
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
 
-    def test = (buildDiscarderProperty((setDiscardProperties(
+    def test = (buildDiscarderProperty(setDiscardProperties(
             '',
             '1',
             '60',
-            '60'));
+            '60')));
 
     // discarderList = buildDiscarderProperty(discardList)
     print('working 2')
