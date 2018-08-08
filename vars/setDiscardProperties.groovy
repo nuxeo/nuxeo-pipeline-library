@@ -43,8 +43,8 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
                 '2')))
     print('working2')
     */
-    properties +=([
-        disc = new java.util.Map$Entry([$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr:'', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '']])
+    properties += ([
+        [$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr:'', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '']]
     ])
     print('working3')
 }
