@@ -18,11 +18,13 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
 
 */
 
-    discardList = [];
+    String discardList = new String();
 
     discardList.push(buildDiscarder(setDiscardProperties(
-                daysToKeepStr: '7',
-                numToKeepStr: '25')))
+                '7',
+                '25',
+                '2',
+                '2')))
 
     properties([
         discardList
