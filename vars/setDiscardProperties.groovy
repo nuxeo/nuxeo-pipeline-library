@@ -20,7 +20,7 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
 
     discardList = [];
 
-    discardList.push(buildDiscarder(logRotator(
+    discardList.push(buildDiscarder(setDiscardProperties(
                 daysToKeepStr: '7',
                 numToKeepStr: '25')))
 
