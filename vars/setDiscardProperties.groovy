@@ -18,7 +18,7 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
 
 */
 
-    discardList = ''
+    def discardList = ""
     print('working 1')
     discardList.push(buildDiscarder(setDiscardProperties(
                 '7',
