@@ -8,7 +8,7 @@
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
     def newParamsList = []
-    def newbool = BooleanParameterDefinition(defaultValue: false, description: "deploy", name: "deploy_flag")
+    def newbool = buildParameter(BooleanParameterDefinition(defaultValue: false, description:"deploy", name: "deploy_flag"))
     newParamsList.add(newbool)
     def newParams = parameters(newParamsList)
     properties([ //job property declaration
