@@ -7,17 +7,15 @@
 
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
-  /*  def newParamsList = []
-    def newbool = booleanParam(defaultValue: false, description: "deploy", name: "deploy_flag")
+    def newParamsList = []
+    def newbool = BooleanParameterDefinition(defaultValue: false, description: "deploy", name: "deploy_flag")
     newParamsList.add(newbool)
     def newParams = parameters(newParamsList)
     properties([ //job property declaration
-        jobProperties,
         disableConcurrentBuilds(),
         newParams,
-        addSchedule,
     ])
-    */
+
 
 /*
     @NonCPS
@@ -42,15 +40,17 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
                 '2')))
     print('working2')
     */
+    /*
     print(properties)
     print(properties.values())
     print(properties.keySet())
     //properties.forEach(key, print())
     print(properties.get('class'))
-    properties.put('class', BuildDiscarder(setDiscardProperties('7',
+    properties.put('class', BuildDiscarder(setDiscardProperties(
+                '7',
                 '25',
                 '2',
                 '2')))
-
+    */
     print('working3')
 }
