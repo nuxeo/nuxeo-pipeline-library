@@ -11,7 +11,7 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
 
     discardList = []
     print('working 1')
-    discardList.push(BuildDiscarderProperty(strategy(Logrotator(
+    discardList.push(BuildDiscarderProperty(strategy(setDiscardProperties(
             '',
             '1',
             '60',
