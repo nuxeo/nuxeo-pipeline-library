@@ -14,7 +14,7 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
             '',
             '1',
             '60',
-            '60'))))
+            '60'))));
 
 
 
