@@ -51,6 +51,6 @@ artifactDaysToKeepStr:'1', artifactNumToKeepStr: '2', daysToKeepStr: '3', numToK
     print(properties.values())
     print(properties.keySet())
     //properties.forEach(key, print())
-    properties.get('class')
+    print(properties.get('class'))
     print('working3')
 }
