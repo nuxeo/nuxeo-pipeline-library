@@ -43,10 +43,11 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
                 '2')))
     print('working2')
     */
-    properties([
+    /*properties([
         [$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator',
 artifactDaysToKeepStr:'1', artifactNumToKeepStr: '2', daysToKeepStr: '3', numToKeepStr: '4']]
-    ])
+    ]) */
+    print(properties)
     print(properties.values())
     print(properties.keySet())
     print('working3')
