@@ -8,7 +8,7 @@
 @NonCPS
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
-    def newParamsList = []
+  /*  def newParamsList = []
     def newbool = booleanParam(defaultValue: false, description: "deploy", name: "deploy_flag")
     newParamsList.add(newbool)
     def newParams = parameters(newParamsList)
@@ -18,6 +18,7 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
         newParams,
         addSchedule,
     ])
+    */
 
 /*
     @NonCPS
@@ -42,8 +43,8 @@ def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String 
                 '2')))
     print('working2')
     */
-    properties([
-        test
+    properties +=([
+        [$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr:'', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '']]
     ])
     print('working3')
 }
