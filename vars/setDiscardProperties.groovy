@@ -9,12 +9,11 @@
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
     discardList = []
-    discardList.push([$class: 'BuildDiscarderProperty', strategy:
-        [$class: 'LogRotator',
+    discardList.push(BuildDiscarderProperty(strategy(LogRotator(
             artifactDaysToKeepStr: '',
             artifactNumToKeepStr: '1',
             daysToKeepStr: '60',
-            numToKeepStr: '60']])
+            numToKeepStr: '60'))))
 
 
     properties([
