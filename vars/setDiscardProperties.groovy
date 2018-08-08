@@ -9,7 +9,7 @@
 def call(String artiDaysToKeep, String artiNumToKeep, String daysToKeep, String numToKeep ) {
 
 
-    def discardList = []
+    def discardList = new String[]
     print('working 1')
     discardList.add(setDiscardProperties(
             '',
